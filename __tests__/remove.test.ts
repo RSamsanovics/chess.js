@@ -34,7 +34,7 @@ test('remove - returns undefined for invalid square', () => {
 test('remove - removing white kingside rook loses castling right', () => {
   const chess = new Chess('r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1')
 
-  chess.remove('h1')
+  chess.remove('h2')
   expect(chess.moves()).not.toContain('O-O')
 
   expect(chess.hash()).toEqual(new Chess(chess.fen()).hash())
